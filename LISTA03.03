@@ -10,7 +10,7 @@ int main()
 
    
  
-    printf("[1] - Servente\n");
+        printf("[1] - Servente\n");
 	printf("[2] - Pedreiro\n");
 	printf("[3] - Mestre de obras\n");
 	printf("[4] - Técnico de segurança\n");
