@@ -9,7 +9,8 @@ int main()
    float sal, aum, novoSalario;
 
    
- 
+ 	printf("Vamos ver qual será o seu aumento de acordo com seu cargo!\n\n");
+
         printf("[1] - Servente\n");
 	printf("[2] - Pedreiro\n");
 	printf("[3] - Mestre de obras\n");
