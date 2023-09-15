@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Portuguese");
+   float nota1, nota2, nota3, nota4, me;
+   
+
+
+    printf("Digite sua nota do 1º bimestre: ");
+    scanf("%f", &nota1);
+
+    printf("Digite sua nota do 2º bimestre: ");
+    scanf("%f", &nota2);
+
+    printf("Digite sua nota do 3º bimestre: ");
+    scanf("%f", &nota3);
+
+    printf("Digite sua nota do 4º bimestre: ");
+    scanf("%f", &nota4);
+
+  
+    me = (nota1 + nota2 + nota3 + nota4) / 4;
+
+   
+    if (me >= 70) {
+        printf("PARABÉNS, você foi aprovado :] Sua média foi: %.2f\n ", me);
+    } 
+    
+    else if (me >= 50) {
+        printf("Você entrou para recuperação com média: %.2f\n", me);
+    }
+    
+    else {
+        printf("Você foi reprovado , com média: %.2f\n Mais sorte da próxima vez!", me);
+    }
+    
+    
+    system("pause");
+    return 0;
+}
