@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    locale(LC_ALL, "Portuguese");
+    float consumo, valorTotal;
+    char bandeira;
+    
+    printf("Vamos calcular o valor total de sua conta de energia💡\n\n");
+    
+    printf("Digite o consumo em KW/h: ");
+    scanf("%f", &consumo);
+
+    printf("Digite a bandeira (V para verde, A para amarela, R para vermelha): ");
+    scanf(" %c", &bandeira);
+
+    valorTotal = consumo * 2.0;
+
+    
+    switch (bandeira) {
+        case 'V':
+          
+            break;
+            
+        case 'A':
+            valorTotal *= 1.025;  
+            break;
+            
+        case 'R':
+            valorTotal *= 1.055; 
+            break;
+            
+        default:
+            printf("Bandeira inválida. Use V, A ou R.\n");
+            return 1;  
+    }
+
+   
+    printf("O valor total da fatura é: R$ %.2f\n", valorTotal);
+
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,47 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+      float salario, valorItem;
+    int numParcelas;
+    float valorParcelaComJuros, limiteParcela;
+
+    
+    printf("Digite o seu salário: ");
+    scanf("%f", &salario);
+
+    printf("Digite o valor do item: ");
+    scanf("%f", &valorItem);
+
+    printf("Digite o número de parcelas desejadas: ");
+    scanf("%d", &numParcelas);
+
+    
+    valorParcelaComJuros = valorItem / numParcelas * 1.05;
+
+ 
+    limiteParcela = 0.3 * salario;
+
+    
+    switch (numParcelas) {
+        case 1 ... 12:
+            if (valorParcelaComJuros <= limiteParcela) {
+                printf("Pagamento autorizado!\n");
+            } else {
+                printf("Pagamento não autorizado: Valor da parcela excede 30%% do salário.\n");
+            }
+            break;
+        default:
+            printf("Pagamento não autorizado: Número de parcelas não pode exceder 12.\n");
+            break;
+    }
+
+    system("pause");
+    return 0;
+}
