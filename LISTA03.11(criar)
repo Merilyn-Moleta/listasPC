@@ -1,0 +1,108 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Portuuguese");
+    int escolha;
+
+    // Solicita os dados ao usuário
+    printf("[1] - IF e ELSE na linguagem C\n");
+    printf("[2] - SWITCH CASE na linguagem C\n");
+    printf("[3] - WHILE na linguagem C\n\n");
+    printf("Escolha uma opção para estudar: ");
+    scanf("%d", &escolha); // Leitura e armazenamento de escolha
+
+
+    printf("\n-------------------------------------------------------------------------------------------------------------\n");
+    
+    // Utiliza switch case para determinar as escolhas
+    switch (escolha) {
+        case 1:
+            printf("\nIF e ELSE na linguagem C:\n\n");
+            printf("O IF e ELSE são estruturas de controle de fluxo que permitem que você tome decisões em seu programa.\n");
+            printf("Exemplo de uso:\n\n");
+            printf("#include <stdio.h>");
+            printf("#include <stlib.h>\n\n");
+            printf("int main() {\n");
+            printf("    int numero;\n");
+            printf("    printf(\"Digite um número: \");\n");
+            printf("    scanf(\"%d\", &numero);\n\n");
+            printf("    if (numero > 0) {\n");
+            printf("        printf(\"O número é positivo.\\n\");\n");
+            printf("    } else {\n");
+            printf("        printf(\"O número é não positivo.\\n\");\n");
+            printf("    }\n\n");
+            printf("    return 0;\n");
+            printf("}\n");
+            break;
+        case 2:
+            printf("\nSWITCH CASE na linguagem C:\n");
+            printf("O SWITCH CASE é uma estrutura de controle de fluxo que permite escolher entre várias opções diferentes com base no valor de uma expressão.\n");
+            printf("Exemplo de uso:\n\n");
+            printf("#include <stdio.h>");
+            printf("#include <stlib.h>\n\n");
+            printf("int main() {\n");
+            printf("    char operacao;\n");
+            printf("    double num1, num2, resultado;\n\n");
+            printf("    printf(\"Digite uma operação (+, -, *, /): \");\n");
+            printf("    scanf(\" %c\", &operacao);\n\n");
+            printf("    printf(\"Digite dois números: \");\n");
+            printf("    scanf(\"%lf %lf\", &num1, &num2);\n\n");
+            printf("    switch (operacao) {\n");
+            printf("        case '+':\n");
+            printf("            resultado = num1 + num2;\n");
+            printf("            break;\n");
+            printf("        case '-':\n");
+            printf("            resultado = num1 - num2;\n");
+            printf("            break;\n");
+            printf("        case '*':\n");
+            printf("            resultado = num1 * num2;\n");
+            printf("            break;\n");
+            printf("        case '/':\n");
+            printf("            if (num2 != 0) {\n");
+            printf("                resultado = num1 / num2;\n");
+            printf("            } else {\n");
+            printf("                printf(\"Divisão por zero não é permitida.\\n\");\n");
+            printf("                return 1;\n");
+            printf("            }\n");
+            printf("            break;\n");
+            printf("        default:\n");
+            printf("            printf(\"Operação inválida.\\n\");\n");
+            printf("            return 1;\n");
+            printf("    }\n\n");
+            printf("    printf(\"Resultado: %.2lf\\n\", resultado);\n");
+            printf("    return 0;\n");
+            printf("}\n");
+            break;
+        case 3:
+            printf("\nWHILE na linguagem C:\n");
+            printf("O WHILE é uma estrutura de controle de fluxo que permite que você execute um bloco de código repetidamente enquanto uma condição for verdadeira.\n");
+            printf("Exemplo de uso:\n\n");
+            printf("#include <stdio.h>");
+            printf("#include <stlib.h>\n\n");
+            printf("int main() {\n");
+            printf("    int contador = 0;\n");
+            printf("    while (contador < 5) {\n");
+            printf("        printf(\"Contagem: %d\\n\", contador);\n");
+            printf("        contador++;\n");
+            printf("    }\n");
+            printf("    return 0;\n");
+            printf("}\n");
+            break;
+        default:
+            printf("\nOpção inválida.\n");
+    }
+    
+    printf("-------------------------------------------------------------------------------------------------------------\n");
+
+    
+    printf("\n\nPara saber mais sobre a linguagem C, você pode assistir a esta playlist de vídeos: ");
+    printf("https://youtube.com/playlist?list=PLZOXIDUlSdZGJ4xzEgkwrvV8qGlDr-rlB&si=JiR5SppAgMVgZR3v\n");
+
+
+    system("pause");
+    return 0;
+}
