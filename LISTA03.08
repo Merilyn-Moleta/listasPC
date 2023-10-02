@@ -1,0 +1,64 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+     float peso, altura, imc;
+    char genero;
+
+    printf("Vamos calcular o seu IMC! ")
+    printf("Informe o seu peso (em kg): ");
+    scanf("%f", &peso);
+
+    printf("Informe a sua altura (em metros): ");
+    scanf("%f", &altura);
+
+    printf("Informe o seu gênero (M para masculino, F para feminino): ");
+    scanf(" %c", &genero);
+
+   
+    imc = peso / (altura * altura);
+
+   
+    switch (genero) {
+        case 'M':
+            if (imc < 20.7) {
+                printf("Abaixo do peso\n");
+            } else if (imc >= 20.7 && imc < 26.4) {
+                printf("No peso normal\n");
+            } else if (imc >= 26.4 && imc < 27.8) {
+                printf("Marginalmente acima do peso\n");
+            } else if (imc >= 27.8 && imc <= 31.1) {
+                printf("Acima do peso ideal\n");
+            } else {
+                printf("Obeso\n");
+            }
+            break;
+
+        case 'F':
+            if (imc < 19.1) {
+                printf("Abaixo do peso\n");
+            } else if (imc >= 19.1 && imc < 25.8) {
+                printf("No peso normal\n");
+            } else if (imc >= 25.8 && imc < 27.3) {
+                printf("Marginalmente acima do peso\n");
+            } else if (imc >= 27.3 && imc <= 32.3) {
+                printf("Acima do peso ideal\n");
+            } else {
+                printf("Obeso\n");
+            }
+            break;
+
+        default:
+            printf("Gênero não reconhecido\n");
+            break;
+    }
+
+    system("pause");
+    return 0;
+}
