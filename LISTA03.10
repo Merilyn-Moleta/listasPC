@@ -4,7 +4,7 @@
 
 int main()
 {
-    locale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "Portuguese");
     float consumo, valorTotal;
     char bandeira;
     
