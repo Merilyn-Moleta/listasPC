@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    float temperatura;
+
+    
+    printf("Digite a temperatura do alimento em graus Celsius: ");
+    scanf("%f", &temperatura);
+
+
+    switch ((int)temperatura) {
+        case 35 ... 40:
+            printf("AVISO: manuseie o alimento com cuidado [!]\n");
+            break;
+        default:
+            if (temperatura < 35) {
+                printf("AVISO: Não há risco de queimadura! =]\n");
+            } else {
+                printf("AVISO: Use luvas para manusear o alimento [!]\n");
+            }
+            break;
+    }
+    system("pause");
+    return 0;
+}
