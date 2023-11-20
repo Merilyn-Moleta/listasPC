@@ -5,6 +5,7 @@
 int main()
 {
    setlocale(LC_ALL, "Portuguese");
+   printf("Vamos mostrar todos os números ímpares entre 50 e 100!");
 
     for (int i = 51; i <= 100; i += 2) 
     {
