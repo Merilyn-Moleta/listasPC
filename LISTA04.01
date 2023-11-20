@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+   setlocale(LC_ALL, "Portuguese");
+   
+    int num, soma = 0, maior, menor, qtdP = 0, qtdI = 0, qtdNum = 0;
+    
+    printf("Este programa irá calcular a média dos números que digitar, mostrará também o maior e menor número dado e a média de todos!\n\n");
+    printf("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.\n\n");
+
+    
+    printf("\n\nDigite o primeiro número: ");
+    scanf("%d", &num);
+    maior = menor = num;
+
+    for (; num != 0;) {
+        soma += num; 
+
+       
+        if (num % 2 == 0) {
+            qtdP++;
+        } else {
+            qtdI++;
+        }
+
+        
+        if (num > maior) {
+            maior = num;
+        } else if (num < menor) {
+            menor = num;
+        }
+
+        qtdNum++; 
+      
+        printf("Digite outro numero (digite 0 para encerrar o programa): ");
+        scanf("%d", &num);
+    }
+
+    if (qtdNum > 0) {
+        float media = (float)soma / qtdNum;
+
+        printf("\nResultados:\n");
+        printf("Media dos valores: %.2f\n", media);
+        printf("Maior valor: %d\n", maior);
+        printf("Menor valor: %d\n", menor);
+        printf("Quantidade de numeros pares: %d\n", qtdP);
+        printf("Quantidade de numeros impares: %d\n", qtdI);
+    } else {
+        printf("Nenhum número foi digitado.\n");
+    }
+
+   system("pause");
+   return 0;
+}
